@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persona 4 Golden</title>
+    <!-- Fonts from fonts.google.com: Bebas Neue (titles) and Open Sans (text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Music player Plyr from plyr.io (its look) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!-- class="p4g" makes everything on this page Persona 4 yellow -->
+  <body class="p4g">
+    <!-- Menu: on phones only the ☰ button shows, clicking it opens the links (button.js).
+         The class on each game link gives it the game's color on hover -->
+    <nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+
+      <div class="menu-links" id="menu-links">
+        <a href="index.html">Home</a>
+        <a class="p3r" href="p3r.html">Persona 3 Reload</a>
+        <a class="p4g" href="p4g.html">Persona 4 Golden</a>
+        <a class="p5r" href="p5r.html">Persona 5 Royal</a>
+      </div>
+    </nav>
+
+    <header class="container">
+      <h1>Persona 4 Golden</h1>
+    </header>
+
+    <main class="container">
+      <img
+        src="images/p4g-hook.webp"
+        alt="The Persona 4 Golden protagonist looking out a train window at the countryside"
+      />
+
+      <!-- Text from the steam page -->
+      <h2>What's it about?</h2>
+      <blockquote>
+        <p>
+          Inaba—a quiet town in rural Japan sets the scene for budding
+          adolescence in Persona 4 Golden. A coming of age story that sets the
+          protagonist and his friends on a journey kickstarted by a chain of
+          serial murders. Explore meeting kindred spirits, feelings of
+          belonging, and even confronting the darker sides of one's self.
+        </p>
+        <p>
+          Persona 4 Golden promises meaningful bonds and experiences shared
+          together with friends.
+        </p>
+      </blockquote>
+      <p class="source">
+        Source:
+        <a href="https://store.steampowered.com/app/1113000/">Steam store page</a>
+      </p>
+
+      <!-- Quick facts on the left, music on the right (stacked on phones) -->
+      <div class="facts-grid">
+        <section>
+          <h2>Quick facts</h2>
+          <ul>
+            <li><strong>Released:</strong> 2012 (came to PC in 2020)</li>
+            <li><strong>Platforms:</strong> PC, PS4, Xbox One, Xbox Series X|S, Nintendo Switch, PS Vita</li>
+            <li><strong>Genre:</strong> Role-playing, social simulation</li>
+            <li><strong>Length:</strong> About 70 hours (main story)</li>
+          </ul>
+        </section>
+
+        <section>
+          <!-- Song from the game: album cover, name and a play button (controls) -->
+          <h2>Music</h2>
+          <div class="song">
+            <img src="images/p4g-song.jpg" alt="Persona 4 Original Soundtrack album cover with the main cast" />
+            <p><strong>Heaven</strong> - Shihoko Hirata</p>
+            <audio controls src="audio/p4g-song.mp3"></audio>
+          </div>
+        </section>
+      </div>
+
+      <h2>Trailer</h2>
+      <iframe
+        class="video"
+        src="https://www.youtube.com/embed/jWO_Nlfgek0"
+        title="Persona 4 Golden Steam launch trailer"
+        allowfullscreen
+      ></iframe>
+
+      <p><a class="button" href="index.html">Back to home</a></p>
+    </main>
+
+    <!-- Footer is same on every page -->
+    <footer>
+      <div class="container footer-grid">
+        <dl>
+          <dt>Made by</dt>
+          <dd>Jonas</dd>
+          <dt>Course</dt>
+          <dd>VEF1VG, Vefgrunnur</dd>
+          <dt>School</dt>
+          <dd>Tækniskólinn, Háteigsvegur</dd>
+        </dl>
+        <iframe
+          class="map"
+          src="https://maps.google.com/maps?q=T%C3%A6knisk%C3%B3linn%2C%20H%C3%A1teigsvegur%2035%2C%20105%20Reykjav%C3%ADk&output=embed"
+          title="Map of Tækniskólinn at Háteigsvegur 35, Reykjavík"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="copyright">&copy; 2026 Jonas</p>
+    </footer>
+    <script src="button.js"></script>
+    <!-- Music player Plyr from plyr.io (its code), music.js starts it -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.js"></script>
+    <script src="music.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persona 5 Royal</title>
+    <!-- Fonts from fonts.google.com: Bebas Neue (titles) and Open Sans (text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Music player Plyr from plyr.io (its look) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!-- class="p5r" makes everything on this page Persona 5 red -->
+  <body class="p5r">
+    <!-- Menu: on phones only the ☰ button shows, clicking it opens the links (button.js).
+         The class on each game link gives it the game's color on hover -->
+    <nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+
+      <div class="menu-links" id="menu-links">
+        <a href="index.html">Home</a>
+        <a class="p3r" href="p3r.html">Persona 3 Reload</a>
+        <a class="p4g" href="p4g.html">Persona 4 Golden</a>
+        <a class="p5r" href="p5r.html">Persona 5 Royal</a>
+      </div>
+    </nav>
+
+    <header class="container">
+      <h1>Persona 5 Royal</h1>
+    </header>
+
+    <main class="container">
+      <img
+        src="images/p5r-art.jpg"
+        alt="Joker and Kasumi drawn in red and black next to the Persona 5 The Royal logo and the words Let us start the game"
+      />
+
+      <!-- text from the games Steam page -->
+      <h2>What's it about?</h2>
+      <blockquote>
+        <p>
+          Forced to transfer to a high school in Tokyo, the protagonist has a
+          strange dream. “You truly are a prisoner of fate. In the near future,
+          ruin awaits you.” With the goal of “rehabilitation” looming overhead,
+          he must save others from distorted desires by donning the mask of a
+          Phantom Thief.
+        </p>
+        <p>
+          Lead the Phantom Thieves of Hearts in this award winning, stylish
+          turn-based RPG filled with dungeon crawling, party customization,
+          strategic combat, and Persona fusion. Explore Tokyo, build
+          relationships, battle Shadows, and infiltrate the minds of the
+          corrupt to make them change their ways!
+        </p>
+      </blockquote>
+      <p class="source">
+        Source:
+        <a href="https://store.steampowered.com/app/1687950/">Steam store page</a>
+      </p>
+
+      <!-- Quick facts on the left, music on the right (stacked on phones) -->
+      <div class="facts-grid">
+        <section>
+          <h2>Quick facts</h2>
+          <ul>
+            <li><strong>Released:</strong> 2020 (2019 in Japan)</li>
+            <li><strong>Platforms:</strong> PC, PS4, PS5, Xbox One, Xbox Series X|S, Nintendo Switch</li>
+            <li><strong>Genre:</strong> Role-playing, social simulation</li>
+            <li><strong>Length:</strong> About 100 hours (main story)</li>
+          </ul>
+        </section>
+
+        <section>
+          <!-- Song from the game: album cover, name and a play button (controls) -->
+          <h2>Music</h2>
+          <div class="song">
+            <img src="images/p5r-song.jpg" alt="Persona 5 Original Soundtrack album cover with Joker in his school uniform and in his Phantom Thief outfit" />
+            <p><strong>No More What Ifs</strong> - Lyn</p>
+            <audio controls src="audio/p5r-song.mp3"></audio>
+          </div>
+        </section>
+      </div>
+
+      <h2>Trailer</h2>
+      <iframe
+        class="video"
+        src="https://www.youtube.com/embed/xHVbI9wjM4U"
+        title="Persona 5 Royal Meet the Phantom Thieves trailer"
+        allowfullscreen
+      ></iframe>
+
+      <p><a class="button" href="index.html">Back to home</a></p>
+    </main>
+
+    <!-- Footer: same on every page -->
+    <footer>
+      <div class="container footer-grid">
+        <dl>
+          <dt>Made by</dt>
+          <dd>Jonas</dd>
+          <dt>Course</dt>
+          <dd>VEF1VG, Vefgrunnur</dd>
+          <dt>School</dt>
+          <dd>Tækniskólinn, Háteigsvegur</dd>
+        </dl>
+        <iframe
+          class="map"
+          src="https://maps.google.com/maps?q=T%C3%A6knisk%C3%B3linn%2C%20H%C3%A1teigsvegur%2035%2C%20105%20Reykjav%C3%ADk&output=embed"
+          title="Map of Tækniskólinn at Háteigsvegur 35, Reykjavík"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="copyright">&copy; 2026 Jonas</p>
+    </footer>
+    <script src="button.js"></script>
+    <!-- Music player Plyr from plyr.io (its code), music.js starts it -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.js"></script>
+    <script src="music.js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persona 3 Reload</title>
+    <!-- Fonts from fonts.google.com: Bebas Neue (titles) and Open Sans (text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Music player Plyr from plyr.io (its look) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!-- class="p3r" makes everything on this page Persona 3 blue -->
+  <body class="p3r">
+    <!-- Menu: on phones only the ☰ button shows, clicking it opens the links (button.js).
+         The class on each game link gives it the game's color on hover -->
+    <nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+
+      <div class="menu-links" id="menu-links">
+        <a href="index.html">Home</a>
+        <a class="p3r" href="p3r.html">Persona 3 Reload</a>
+        <a class="p4g" href="p4g.html">Persona 4 Golden</a>
+        <a class="p5r" href="p5r.html">Persona 5 Royal</a>
+      </div>
+    </nav>
+
+    <header class="container">
+      <h1>Persona 3 Reload</h1>
+    </header>
+
+    <main class="container">
+      <img
+        src="images/p3r-hook.jpg"
+        alt="The Persona 3 Reload protagonist sinking upside down into deep blue water"
+      />
+
+      <!-- Text from the game's Steam page -->
+      <h2>What's it about?</h2>
+      <blockquote>
+        <p>
+          Step into the shoes of a transfer student thrust into an unexpected
+          fate when entering the hour "hidden" between one day and the next.
+          Awaken an incredible power and chase the mysteries of the Dark Hour,
+          fight for your friends, and leave a mark on their memories forever.
+        </p>
+        <p>
+          Persona 3 Reload is a captivating reimagining of the genre-defining
+          RPG, reborn for the modern era.
+        </p>
+      </blockquote>
+      <p class="source">
+        Source:
+        <a href="https://store.steampowered.com/app/2161700/">Steam store page</a>
+      </p>
+
+      <!-- Quick facts on the left, music on the right (stacked on phones) -->
+      <div class="facts-grid">
+        <section>
+          <h2>Quick facts</h2>
+          <ul>
+            <li><strong>Released:</strong> 2024</li>
+            <li><strong>Platforms:</strong> PC, PS4, PS5, Xbox One, Xbox Series X|S, Nintendo Switch 2</li>
+            <li><strong>Genre:</strong> Role-playing, social simulation</li>
+            <li><strong>Length:</strong> About 60 hours (main story)</li>
+          </ul>
+        </section>
+
+        <section>
+          <!-- Song from the game: album cover, name and a play button (controls) -->
+          <h2>Music</h2>
+          <div class="song">
+            <img src="images/p3r-song.jpg" alt="Persona 3 Reload Original Soundtrack album cover with the protagonist, Junpei and Yukari" />
+            <p><strong>Color Your Night</strong> - Lotus Juice</p>
+            <audio controls src="audio/p3r-song.mp3"></audio>
+          </div>
+        </section>
+      </div>
+
+      <h2>Trailer</h2>
+      <iframe
+        class="video"
+        src="https://www.youtube.com/embed/gpF59xO4D9Y"
+        title="Persona 3 Reload launch trailer"
+        allowfullscreen
+      ></iframe>
+
+      <p><a class="button" href="index.html">Back to home</a></p>
+    </main>
+
+    <!-- Footer is same on every page -->
+    <footer>
+      <div class="container footer-grid">
+        <dl>
+          <dt>Made by</dt>
+          <dd>Jonas</dd>
+          <dt>Course</dt>
+          <dd>VEF1VG, Vefgrunnur</dd>
+          <dt>School</dt>
+          <dd>Tækniskólinn, Háteigsvegur</dd>
+        </dl>
+        <iframe
+          class="map"
+          src="https://maps.google.com/maps?q=T%C3%A6knisk%C3%B3linn%2C%20H%C3%A1teigsvegur%2035%2C%20105%20Reykjav%C3%ADk&output=embed"
+          title="Map of Tækniskólinn at Háteigsvegur 35, Reykjavík"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="copyright">&copy; 2026 Jonas</p>
+    </footer>
+    <script src="button.js"></script>
+    <!-- Music player Plyr from plyr.io (its code), music.js starts it -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.js"></script>
+    <script src="music.js"></script>
+  </body>
+</html>

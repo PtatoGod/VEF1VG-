@@ -1,0 +1,365 @@
+/* ============================
+   COLORS: change a color here
+   ============================ */
+
+:root {
+  --black: #0b0b0f; /* page background */
+  --dark: #18181f; /* menu, boxes and footer */
+  --text: #e4e4e7; /* normal text */
+  --gray: #a1a1aa; /* small text, like "Source:" */
+  --p3r: #1fa2ff; /* Persona 3 Reload blue */
+  --p4g: #ffd21f; /* Persona 4 Golden yellow */
+  --p5r: #e5191c; /* Persona 5 Royal red */
+  --game: var(--text); /* the color used when we're not on a game */
+}
+
+/* Each game sets --game to its own color.
+   Everything below that uses var(--game) then gets that game's color:
+   the boxes on the front page, and the whole game page (body class="p3r") */
+.p3r {
+  --game: var(--p3r);
+}
+
+.p4g {
+  --game: var(--p4g);
+}
+
+.p5r {
+  --game: var(--p5r);
+}
+
+/* =====================================================
+   BASICS (phones first, then bigger screens below)
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--black);
+}
+
+/* Max width for the content, centered on the page */
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: normal; /* Bebas Neue is already a thich font */
+  letter-spacing: 2px;
+  color: var(--game);
+}
+
+h1 {
+  margin: 2rem 0 1rem;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* Images always fill the box 100% that they are in */
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: var(--game);
+}
+
+/* Hidden on phones images should hide on small screens. They come back at or over 48rem (see below) */
+.hide-on-phone {
+  display: none;
+}
+
+/* =====================================================
+   MENU: ☰ button on phones, links in a row on bigger screens
+   ===================================================== */
+
+/* text-align: center puts the button and the links in the middle */
+nav {
+  text-align: center;
+  background-color: var(--dark);
+}
+
+/* display: block = each link on its own line (stacked on phones) */
+nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--game);
+  text-decoration: underline;
+}
+
+/* The ☰ button. background and border: none; so it looks like plain text */
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* The links are hidden on phones until the button is clicked */
+.menu-links {
+  display: none;
+}
+
+/* button.js adds the class "active" when the ☰ button is clicked */
+.menu-links.active {
+  display: block;
+}
+
+/* ========
+   HEADER
+   =======*/
+
+header {
+  text-align: center;
+}
+
+/* Big white title with a line underneath in the colors of all three games
+   (blue -> yellow -> red, same order as the picture below and the footer line) */
+.big-title {
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  color: #fff;
+  border-bottom: 4px solid;
+  border-image: linear-gradient(90deg, var(--p3r), var(--p4g), var(--p5r)) 1;
+}
+
+.tagline {
+  margin: 0 0 2rem;
+  font-size: 1.2rem;
+}
+
+/* ============
+   QUOTES
+   ============ */
+
+blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 6px solid var(--game);
+  font-style: italic;
+}
+
+.source {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* =====================================================
+   GAME BOXES on the front page
+   ===================================================== */
+
+/* One column on phones, three side by side on big screens (see below) */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--dark);
+  border-top: 4px solid var(--game); /* line in the game's color */
+}
+
+.box .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Button ("See more" and "Back to home") */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--game);
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: var(--game);
+  color: var(--black);
+}
+
+/* =====================================================
+   GAME PAGES (p3r.html, p4g.html, p5r.html)
+   ===================================================== */
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* YouTube video: full width, always the shape of a video (16:9),
+   with a border in the game's color */
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 3px solid var(--game);
+}
+
+/* =====================================================
+   MUSIC (game pages): everything for the song box is here
+   ===================================================== */
+
+/* Quick facts and music: stacked on phones, side by side on bigger screens */
+.facts-grid {
+  display: grid;
+  gap: 0 2rem; /* no gap between rows (the h2 already has space), 2rem between columns */
+}
+
+/* 768px and up: quick facts takes the space that's left (1fr),
+   the music column is only as wide as the song box (auto) */
+@media screen and (min-width: 48rem) {
+  .facts-grid {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+/* Song box: album cover, song name and the player.
+   The player itself is made by Plyr (plyr.io), the --plyr lines change its colors */
+.song {
+  max-width: 16rem;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  background-color: var(--dark);
+  border-top: 4px solid var(--game);
+  --plyr-color-main: var(--game);
+  --plyr-audio-controls-background: var(--dark);
+  --plyr-audio-control-color: var(--text);
+}
+
+/* Square album cover. object-fit: cover cuts off the sides
+   of a wide picture instead of squishing it */
+.song img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Smaller volume slider, so the time slider gets more space
+   (.plyr__volume is the class Plyr gives the volume part) */
+.song .plyr__volume input {
+  min-width: 0;
+  max-width: 3.5rem;
+}
+
+/* =====================================================
+   FOOTER: about me plus map (same on every page)
+   ===================================================== */
+
+/* The line on top has the colors of all three games, same as the big title.
+   border-image paints the gradient into the border */
+footer {
+  margin-top: 3rem;
+  padding: 2rem 0 0;
+  background-color: var(--dark);
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, var(--p3r), var(--p4g), var(--p5r)) 1;
+}
+
+/* Info and map: stacked on phones, side by side on bigger screens (see below) */
+.footer-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* "Made by / Course / School" as two columns: label on the left, answer on the right */
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+}
+
+dt {
+  color: var(--gray);
+}
+
+dd {
+  margin: 0;
+}
+
+.map {
+  width: 100%;
+  height: 12rem;
+  border: 0;
+}
+
+/* The small "2026 Jonas" line at the very bottom */
+.copyright {
+  margin: 2rem 0 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gray);
+  border-top: 1px solid #2a2a33; /* thin line between the footer and this line */
+}
+
+/* =====================================================
+   BIGGER SCREENS
+   ===================================================== */
+
+/* 600px and up: no ☰ button, links always showing, side by side in a row */
+@media screen and (min-width: 37.5rem) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu-links {
+    display: block;
+  }
+
+  nav a {
+    display: inline-block;
+  }
+}
+/* 768px and up: images come back, bigger title, footer in two columns */
+@media screen and (min-width: 48rem) {
+  .hide-on-phone {
+    display: block;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 960px and up: even bigger title, the three game boxes side by side */
+@media screen and (min-width: 60rem) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

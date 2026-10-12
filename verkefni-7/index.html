@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persona</title>
+    <!-- Fonts from fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Menu on phones only the ☰ button shows when the screen is narrow.
+         Clicking it opens the links button.js (which my friend help me set up).
+
+         The class on each game link gives it the game's color on hover -->
+    <nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+
+      <div class="menu-links" id="menu-links">
+        <a href="index.html">Home</a>
+        <a class="p3r" href="p3r.html">Persona 3 Reload</a>
+        <a class="p4g" href="p4g.html">Persona 4 Golden</a>
+        <a class="p5r" href="p5r.html">Persona 5 Royal</a>
+      </div>
+    </nav>
+
+    <header class="container">
+      <h1 class="big-title">Welcome to the Velvet Room</h1>
+      <p class="tagline">A beginner's guide to Persona 3, 4 &amp; 5</p>
+      <img
+        class="hide-on-phone"
+        src="images/persona-header.jpg"
+        alt="The Persona 3 Reload protagonist, the Persona 4 Golden protagonist, and Joker from Persona 5 Royal side by side, each with their game's logo"
+      />
+    </header>
+
+    <main class="container">
+      <!-- Intro is from Wikipedia -->
+      <section>
+        <h2>What is Persona?</h2>
+        <blockquote>
+          <p>
+            Persona … is a Japanese video game series and media franchise
+            developed by Atlus and owned by Sega.
+          </p>
+          <p>
+            Persona's core features include a group of students as the main
+            cast, a silent protagonist similar to the mainline Megami Tensei
+            franchise, and combat using Personas. … Its overall theme is the
+            exploration of the human psyche and how the characters find their
+            true selves.
+          </p>
+        </blockquote>
+        <p class="source">
+          Source:
+          <a href="https://en.wikipedia.org/wiki/Persona_(franchise)"
+            >Wikipedia</a
+          >
+        </p>
+      </section>
+
+      <!-- The three games. one box each. The class (p3r, p4g, p5r) picks the boxs color -->
+      <section class="cards">
+        <article class="box p3r">
+          <img
+            class="hide-on-phone"
+            src="images/p3r-capsule.jpg"
+            alt="The Persona 3 Reload protagonist holding his Evoker, with his Persona behind him and the Persona 3 Reload logo"
+          />
+          <h2>Persona 3 Reload</h2>
+          <p>
+            There's a hidden hour between one day and the next. Most people
+            sleep right through it...
+          </p>
+          <a class="button" href="p3r.html">See more</a>
+        </article>
+
+        <article class="box p4g">
+          <img
+            class="hide-on-phone"
+            src="images/p4g-capsule.jpg"
+            alt="The Persona 4 Golden cast on a yellow background next to the Persona 4 Golden logo"
+          />
+          <h2>Persona 4 Golden</h2>
+          <p>
+            They say your soulmate will appear if you stare into a television
+            set on a rainy night...
+          </p>
+          <a class="button" href="p4g.html">See more</a>
+        </article>
+
+        <article class="box p5r">
+          <img
+            class="hide-on-phone"
+            src="images/p5r-capsule.jpg"
+            alt="Joker and the Phantom Thieves next to the Persona 5 Royal logo"
+          />
+          <h2>Persona 5 Royal</h2>
+          <p>
+            A strange app appeared on your phone. You can delete it as many
+            times as you want... it always comes back.
+          </p>
+          <a class="button" href="p5r.html">See more</a>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer on every page -->
+    <footer>
+      <div class="container footer-grid">
+        <dl>
+          <dt>Made by</dt>
+          <dd>Jonas</dd>
+          <dt>Course</dt>
+          <dd>VEF1VG, Vefgrunnur</dd>
+          <dt>School</dt>
+          <dd>Tækniskólinn, Háteigsvegur</dd>
+        </dl>
+        <iframe
+          class="map"
+          src="https://maps.google.com/maps?q=T%C3%A6knisk%C3%B3linn%2C%20H%C3%A1teigsvegur%2035%2C%20105%20Reykjav%C3%ADk&output=embed"
+          title="Map of Tækniskólinn at Háteigsvegur 35, Reykjavík"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="copyright">&copy; 2026 Jonas</p>
+    </footer>
+    <script src="button.js"></script>
+  </body>
+</html>
